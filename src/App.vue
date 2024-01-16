@@ -1,8 +1,8 @@
 <template class=" bg-gray-950">
-  <div class=" bg-gray-950 flex flex-col gap-5 p-5 pr-64 pl-64">
-    <div class="flex justify-between gap-5">
-      <div class="text-white bg-emerald-800 rounded-2xl p-5 w-1/2 flex justify-between gap-5" v-if="jakub">
-        <div class="w-2/3">
+  <div class=" bg-gray-950 flex flex-col gap-5 p-5 pr-5 pl-5 md:pr-64 md:pl-64">
+    <div class="flex justify-between gap-5 flex-col md:flex-row">
+      <div class="text-white bg-emerald-800 rounded-2xl p-5 w-auto md:w-1/2 flex justify-between gap-5 flex-col md:flex-row" v-if="jakub">
+        <div class="w-auto md:w-2/3">
           <h2 class=" font-extrabold text-2xl">{{ jakub.name }}</h2>
           <p><span class="font-bold">{{ jakubIndex }}</span> miejsce</p>
           <p><span class="font-bold">{{ jakub.likes }}</span> like</p>
@@ -11,9 +11,9 @@
         </div>
         <button @click="goToMarkowskiVideo" class="bg-white text-gray-950 font-bold p-5 rounded-xl">Polub film <span class=" text-3xl">👍</span></button>
       </div>
-      <div class="text-white bg-emerald-800 rounded-2xl p-5 w-1/2 text-center flex flex-col items-center justify-center">
+      <div class="text-white bg-emerald-800 rounded-2xl p-5 w-auto md:w-1/2 text-center flex flex-col items-center justify-center">
         <h2>Do końca głosowania pozostało</h2>
-        <p class="text-2xl font-semibold">{{ days }} dni, {{ hours }} godzin, {{ minutes }} minut, {{ seconds }} sekund</p>
+        <p class="text-base md:text-2xl font-semibold">{{ days }} dni, {{ hours }} godzin, {{ minutes }} minut, {{ seconds }} sekund</p>
       </div>
     </div>
 
